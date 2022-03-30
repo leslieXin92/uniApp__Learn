@@ -17,17 +17,20 @@
 				"navigationBarTitleText": "数据绑定",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/conditionalRender/conditionalRender",
+			"style": {
+				"navigationBarTitleText": "条件渲染",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/listRender/listRender",
+			"style": {
+				"navigationBarTitleText": "列表渲染",
+				"enablePullDownRefresh": false
+			}
 		}
-	    ,{
-            "path" : "pages/conditionalRender/conditionalRender",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "条件渲染",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

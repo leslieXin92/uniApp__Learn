@@ -3,6 +3,7 @@
 		<button type="primary" @click="skipTemplateSyntax"> 模板语法 </button>
 		<button type="primary" @click="skipDataBinding"> 数据绑定 </button>
 		<button type="primary" @click="skipConditionalRender"> 条件渲染 </button>
+		<button type="primary" @click="skipListRender"> 列表渲染 </button>
 	</view>
 
 </template>
@@ -30,9 +31,15 @@ export default {
 			uni.navigateTo({
 				url:'/pages/conditionalRender/conditionalRender'
 			})
+		},
+		// 列表渲染
+		skipListRender(){
+			uni.navigateTo({
+				url:'/pages/listRender/listRender'
+			})
 		}
 	}
-};
+}
 </script>
 
 <style>
