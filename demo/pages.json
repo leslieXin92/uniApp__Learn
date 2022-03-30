@@ -18,7 +18,16 @@
 				"enablePullDownRefresh": false
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/conditionalRender/conditionalRender",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "条件渲染",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
