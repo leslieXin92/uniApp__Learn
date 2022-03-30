@@ -61,7 +61,7 @@ uni.getLocation({
                 msg: 'hello world'
             }
         },
-        mothods: {
+        methods: {
             handleClick() {
                 this.msg = 'hola world'
             }
@@ -104,7 +104,71 @@ uni-app 中 App 端内置了 HTML5+引擎，让 js 可以直接调用丰富的�
 vue create -p dcloudio/uni-preset-vue demo
 ```
 
+## 1.4 项目目录
 
+<img src="https://raw.githubusercontent.com/leslieXin92/picGo/master/img/202203301654742.png" style="zoom:80%;" />
+
+# 二、基本语法
+
+## 2.1 模板语法
+
+```vue
+<template>
+	<view @click="handleClick"> {{msg}} </view>
+</template>
+
+<script>
+    export default({
+        data() {
+            return {
+                msg: 'hello world'
+            }
+        },
+        methods: {
+            handleClick() {
+                this.msg = 'hola world'
+            }
+        }
+    })
+</script>
+```
+
+## 2.2 数据绑定
+
+```vue
+<template>
+	<view>
+		<image :src="imgPath" mode="aspectFit" />
+		<input type="text" v-model="msg" />
+		<view> 此时data中msg的值为：{{ msg }} </view>
+	</view>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			imgPath: '../../static/logo.png',
+			msg: 'yahoo'
+		};
+	}
+};
+</script>
+
+<style>
+* {
+	margin: 10px;
+}
+image {
+	width: 50%;
+}
+input {
+	width: 50%;
+	outline: 2px solid #007aff;
+}
+</style>
+
+```
 
 
 

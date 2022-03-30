@@ -5,6 +5,18 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		}, {
+			"path": "pages/templateSyntax/templateSyntax",
+			"style": {
+				"navigationBarTitleText": "模板语法",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/dataBinding/dataBinding",
+			"style": {
+				"navigationBarTitleText": "数据绑定",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {
