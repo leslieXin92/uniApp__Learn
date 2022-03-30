@@ -4,6 +4,7 @@
 		<button type="primary" @click="skipDataBinding"> 数据绑定 </button>
 		<button type="primary" @click="skipConditionalRender"> 条件渲染 </button>
 		<button type="primary" @click="skipListRender"> 列表渲染 </button>
+		<button type="primary" @click="skipEventBinding"> 事件绑定 </button>
 	</view>
 
 </template>
@@ -36,6 +37,12 @@ export default {
 		skipListRender(){
 			uni.navigateTo({
 				url:'/pages/listRender/listRender'
+			})
+		},
+		// 列表渲染
+		skipEventBinding(){
+			uni.navigateTo({
+				url:'/pages/eventBinding/eventBinding'
 			})
 		}
 	}

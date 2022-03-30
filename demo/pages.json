@@ -29,6 +29,12 @@
 				"navigationBarTitleText": "列表渲染",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/eventBinding/eventBinding",
+			"style": {
+				"navigationBarTitleText": "事件绑定",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {
