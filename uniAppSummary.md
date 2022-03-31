@@ -332,11 +332,6 @@ export default {
 	}
 }
 </script>
-
-<style>
-
-</style>
-
 ```
 
 world 组件：
@@ -357,11 +352,6 @@ export default {
 	}
 }
 </script>
-
-<style>
-
-</style>
-
 ```
 
 父组件：
@@ -375,3 +365,4 @@ export default {
 </template>
 ```
 
+## 2.7 
