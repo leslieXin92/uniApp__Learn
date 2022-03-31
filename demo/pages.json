@@ -35,8 +35,23 @@
 				"navigationBarTitleText": "事件绑定",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/baseComponents/baseComponents",
+			"style": {
+				"navigationBarTitleText": "基础组件",
+				"enablePullDownRefresh": false
+			}
 		}
-	],
+	    ,{
+            "path" : "pages/customComponents/customComponents",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "自定义组件",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

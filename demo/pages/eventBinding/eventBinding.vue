@@ -7,34 +7,34 @@
 </template>
 
 <script>
-	export default {
-		data() {
-			return {}
+export default {
+	data() {
+		return {};
+	},
+	methods: {
+		handleClickFather() {
+			console.log('father被点击了！');
 		},
-		methods: {
-			handleClickFather(){
-				console.log('father被点击了！')
-			},
-			handleClickSon(){
-				console.log('son被点击了！')
-			}
+		handleClickSon() {
+			console.log('son被点击了！');
 		}
 	}
+}
 </script>
 
 <style>
-.father{
+.father {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 200px;
 	height: 200px;
 	margin: 20px auto;
-	background-color: #007AFF;
+	background-color: #007aff;
 }
-.son{
+.son {
 	width: 100px;
 	height: 100px;
-	background-color: #4CD964;
+	background-color: #4cd964;
 }
 </style>

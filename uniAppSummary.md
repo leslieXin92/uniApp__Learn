@@ -282,3 +282,96 @@ export default {
 </style>
 ```
 
+## 2.6 基础组件
+
+```html
+<template>
+	<view class="box">
+		<view> 我是view组件 </view>
+
+		<scroll-view scroll-y scroll-x>
+			<view v-for="i in 10"> 我是scroll-view组件 </view>
+		</scroll-view>
+
+		<text> 我是text组件 </text>
+
+		<swiper indicator-dots autoplay>
+			<swiper-item>
+				<view> swiper-item1 </view>
+			</swiper-item>
+			<swiper-item>
+				<view> swiper-item2 </view>
+			</swiper-item>
+			<swiper-item>
+				<view> swiper-item3 </view>
+			</swiper-item>
+		</swiper>
+	</view>
+</template>
+```
+
+更多基础组件：<a href="https://uniapp.dcloud.net.cn/component/" style="text-decoration:none"> 网址 </a>
+
+## 2.7 自定义组件
+
+hello 组件：
+
+```vue
+<template>
+	<text :style="{ color }"> hello </text>
+</template>
+
+<script>
+export default {
+	name:"hello",
+	props:{
+		color: {
+			type: String,
+			default: 'blue'
+		}
+	}
+}
+</script>
+
+<style>
+
+</style>
+
+```
+
+world 组件：
+
+```vue
+<template>
+	<text :style="{ color }"> world </text>
+</template>
+
+<script>
+export default {
+	name:"world",
+	props: {
+		color: {
+			type: String,
+			default: 'blue'
+		}
+	}
+}
+</script>
+
+<style>
+
+</style>
+
+```
+
+父组件：
+
+```html
+<template>
+	<view>
+		<hello color="red" />
+		<world />
+	</view>
+</template>
+```
+

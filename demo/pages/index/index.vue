@@ -5,6 +5,8 @@
 		<button type="primary" @click="skipConditionalRender"> 条件渲染 </button>
 		<button type="primary" @click="skipListRender"> 列表渲染 </button>
 		<button type="primary" @click="skipEventBinding"> 事件绑定 </button>
+		<button type="primary" @click="skipComponents"> 基础组件 </button>
+		<button type="primary" @click="skipCustomComponents"> 自定义组件 </button>
 	</view>
 
 </template>
@@ -43,6 +45,18 @@ export default {
 		skipEventBinding(){
 			uni.navigateTo({
 				url:'/pages/eventBinding/eventBinding'
+			})
+		},
+		// 基础组件
+		skipComponents() {
+			uni.navigateTo({
+				url:'/pages/baseComponents/baseComponents'
+			})
+		},
+		// 自定义组件
+		skipCustomComponents() {
+			uni.navigateTo({
+				url:'/pages/customComponents/customComponents'
 			})
 		}
 	}
