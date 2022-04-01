@@ -7,6 +7,7 @@
 		<button type="primary" @click="skipEventBinding"> 事件绑定 </button>
 		<button type="primary" @click="skipComponents"> 基础组件 </button>
 		<button type="primary" @click="skipCustomComponents"> 自定义组件 </button>
+		<button type="primary" @click="skipCommonApi"> 常用Api </button>
 	</view>
 
 </template>
@@ -57,6 +58,12 @@ export default {
 		skipCustomComponents() {
 			uni.navigateTo({
 				url:'/pages/customComponents/customComponents'
+			})
+		},
+		// 常用Api
+		skipCommonApi() {
+			uni.navigateTo({
+				url:'/pages/commonApi/commonApi'
 			})
 		}
 	}

@@ -49,7 +49,14 @@
                 "navigationBarTitleText": "自定义组件",
                 "enablePullDownRefresh": false
             }
-            
+        }
+        ,{
+            "path" : "pages/commonApi/commonApi",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "常用Api",
+                "enablePullDownRefresh": false
+            }
         }
     ],
 	"globalStyle": {

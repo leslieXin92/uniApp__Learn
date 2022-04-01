@@ -365,4 +365,110 @@ export default {
 </template>
 ```
 
-## 2.7 
+## 2.7 常用Api
+
+设置标题：
+
+```javascript
+uni.setNavigationBarTitle({
+    title: 'new title'
+})
+```
+
+交互反馈：
+
+```javascript
+uni.showToast({
+    title:'加载中',
+    icon: 'loading'
+})
+```
+
+页面跳转：
+
+```javascript
+// navigateTo
+uni.navigateTo({
+	url: 'test?id=1&name=yahoo'
+})
+
+// redirectTo
+uni.redirectTo({
+	url: 'test?id=1'
+})
+
+// navigateBack
+uni.navigateBack({
+	delta: 1
+})
+
+// reLaunch
+uni.reLaunch({
+	url: 'test?id=1'
+})
+
+// switchTab
+uni.switchTab({
+	url: '/pages/index/index'
+})
+```
+
+更多Api：<a href="https://uniapp.dcloud.net.cn/api/" style="text-decoration:none"> 网址 </a>
+
+## 2.8 生命周期
+
+### 2.81 应用生命周期
+
+应用生命周期仅可在 App.vue 中监听，在其它页面5监听无效。
+
+|       钩子        |                     说明                      |
+| :---------------: | :-------------------------------------------: |
+|     onLaunch      | 当 uni-app 初始化完成时触发（全局只触发一次） |
+|      onShow       |     当 uni-app 启动，或从后台进入前台显示     |
+|      onHide       |        当 uni-app 从前台进入后台时触发        |
+|      onError      |             当 uni-app 报错时触发             |
+| onUniNviewMessage |        对 nvue 页面发送的数据进行监听         |
+
+### 2.8.2 页面生命周期
+
+|                钩子                 |                    说明                    |
+| :---------------------------------: | :----------------------------------------: |
+|               onLoad                |   监听页面加载，参数为上个页面传递的数据   |
+|               onShow                | 监听页面显示，页面每次出现在屏幕上都会触发 |
+|               onReady               |            监听页面初次渲染完成            |
+|               onHide                |                监听页面隐藏                |
+|              onUnload               |                监听页面卸载                |
+|              onResize               |              监听窗口尺寸变化              |
+|          onPullDownRefresh          |              监听用户下拉动作              |
+|            onReachBottom            |              监听页面上拉到底              |
+|            onTabItemTap             |              点击 tab 时触发               |
+|          onShareAppMessage          |             用户点击右上角分享             |
+|            onPageScroll             |                监听页面滚动                |
+|      onNavigationBarButtonTap       |         监听原生标题栏按钮点击事件         |
+|             onBackPress             |                监听页面返回                |
+|  onNavigationBarSearchInputChanged  |  监听原生标题栏搜索输入框输入内容改变事件  |
+| onNavigationBarSearchInputConfirmed |      监听原生标题栏搜索输入框搜索事件      |
+|   onNavigationBarSearchInputClick   |      监听原生标题栏搜索输入框点击事件      |
+
+tips：
+
+1.  onPullDownRefresh：下拉刷新，需要在 `pages.json` 里配置 enablePullDownRefresh 为 true，当处理完数据刷新后，uni.stopPullDownRefrsh 可以停止当前页面的下拉刷新。enablePullDownRefresh 设置为 false 可以禁止改页面下拉刷新。
+2.  onReachBottom：上拉加载，可以在 `pages.json` 里配置触发距离 onReachBottomDistance；若使用 scroll-view 组件导致页面没有滚动，则不会触发触底事件。
+
+### 2.8.3 组件生命周期
+
+| 钩子 | 说明 |
+| ---- | ---- |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+
+
+
+
+
