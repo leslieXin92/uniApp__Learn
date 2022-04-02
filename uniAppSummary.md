@@ -441,10 +441,10 @@ uni.switchTab({
 |              onResize               |              监听窗口尺寸变化              |
 |          onPullDownRefresh          |              监听用户下拉动作              |
 |            onReachBottom            |              监听页面上拉到底              |
-|            onTabItemTap             |              点击 tab 时触发               |
+|            onTabItemTap             |       点击 tab 时触发，参数为 Object       |
 |          onShareAppMessage          |             用户点击右上角分享             |
-|            onPageScroll             |                监听页面滚动                |
-|      onNavigationBarButtonTap       |         监听原生标题栏按钮点击事件         |
+|            onPageScroll             |        监听页面滚动，参数为 Object         |
+|      onNavigationBarButtonTap       | 监听原生标题栏按钮点击事件，参数为 Object  |
 |             onBackPress             |                监听页面返回                |
 |  onNavigationBarSearchInputChanged  |  监听原生标题栏搜索输入框输入内容改变事件  |
 | onNavigationBarSearchInputConfirmed |      监听原生标题栏搜索输入框搜索事件      |
@@ -453,20 +453,49 @@ uni.switchTab({
 tips：
 
 1.  onPullDownRefresh：下拉刷新，需要在 `pages.json` 里配置 enablePullDownRefresh 为 true，当处理完数据刷新后，uni.stopPullDownRefrsh 可以停止当前页面的下拉刷新。enablePullDownRefresh 设置为 false 可以禁止改页面下拉刷新。
+
 2.  onReachBottom：上拉加载，可以在 `pages.json` 里配置触发距离 onReachBottomDistance；若使用 scroll-view 组件导致页面没有滚动，则不会触发触底事件。
+
+3.  onTabItemTap 参数：
+
+    ```json
+    {
+        index: String, // 被点击tabltem的序号，从0开始
+        pagePath: String, // 被点击babItem的页面路径
+        text: String // 被点击tabItem的按钮文字
+    }
+    ```
+
+4.  onPageScroll 参数：
+
+    ```json
+    {
+        scroll: Number // 页面在垂直方向已滚动的距离(单位：px)
+    }
+    ```
+
+5.  onNavigationBarButtonTab 参数：
+
+    ```json
+    {
+        index: Number // 原生标题栏按钮数组的下标
+    }
+    ```
 
 ### 2.8.3 组件生命周期
 
-| 钩子 | 说明 |
-| ---- | ---- |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
+uni-app 组件的生命周期，与 Vue 标准组件的生命周期相同，没有页面级的 onLoad 等生命周期。
+
+|     钩子      |                         说明                          |
+| :-----------: | :---------------------------------------------------: |
+| beforeCreate  |                 实例初始化之后被调用                  |
+|    cretaed    |                 实例创建完成后被调用                  |
+|  beforeMount  |                  挂在开始之前被调用                   |
+|    mounted    |                挂在到实例上之后被调用                 |
+| beforeUpdate  |      数据更新时被调用，发生在虚拟 Dom 打补丁之前      |
+|    updated    | 在由于数组改变导致虚拟 Dom 重新渲染和打补丁之后被调用 |
+| beforeDestroy |        实例销毁之前被调用，此时实例仍完全可见         |
+|   destroyed   |                  Vue实例销毁后被调用                  |
 
 
 
